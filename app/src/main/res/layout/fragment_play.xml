@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintlayout"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PlayFragment"
+    android:focusable="true">
+    <TextView
+        android:id="@+id/tvTimer"
+        style="@style/TimerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivFirstClock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/time_eight" />
+            <ImageView
+                android:id="@+id/ivSecondClock"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time_eight" />
+            <ImageView
+                android:id="@+id/ivThirdClock"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time_eight" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp">
+            <TextView
+                style="@style/CitiesText"
+                android:id="@+id/tvFirstCity"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/city_name" />
+            <TextView
+                android:id="@+id/tvSecondCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CitiesText"
+                android:text="@string/city_name" />
+            <TextView
+                style="@style/CitiesText"
+                android:text="@string/city_name"
+                android:id="@+id/tvThirdCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/ivFourthClock"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time_eight" />
+
+            <ImageView
+                android:id="@+id/ivFifthClock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/time_eight" />
+
+            <ImageView
+                android:id="@+id/ivSixthClock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/time_eight" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                style="@style/CitiesText"
+                android:text="@string/city_name"
+                android:id="@+id/tvFourthCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:id="@+id/tvFifthCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CitiesText"
+                android:text="@string/city_name"/>
+            <TextView
+                android:id="@+id/tvSixthCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CitiesText"
+                android:text="@string/city_name" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

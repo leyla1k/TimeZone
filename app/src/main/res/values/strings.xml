@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Time Zone</string>
+    <string name="play_button_name">PLAY</string>
+    <string name="match_the_time_zone_with_the_city_text">MATCH THE TIME ZONE WITH THE CITY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="casual_button_name">CASUAL</string>
+    <string name="play_for_time_button_name">PLAY FOR TIME</string>
+    <string name="initial_timer_value">01:00</string>
+    <string name="city_name">Город</string>
+    <string name="button_ok_name">OK</string>
+    <string name="ed_answer_name">УКАЖИ ОТВЕТ</string>
+    <string name="bt_play_again_name">ИГРАТЬ СНОВА</string>
+    <string name="tv_history_name">История игр</string>
+</resources>

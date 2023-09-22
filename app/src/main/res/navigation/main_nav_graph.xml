@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/entryFragment">
+
+    <fragment
+        android:id="@+id/entryFragment"
+        android:name="com.example.timezone.ui.EntryFragment"
+        android:label="fragment_entry"
+        tools:layout="@layout/fragment_entry">
+        <action
+            android:id="@+id/action_entryFragment_to_modeFragment"
+            app:destination="@id/modeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/modeFragment"
+        android:name="com.example.timezone.ui.ModeFragment"
+        android:label="fragment_mode"
+        tools:layout="@layout/fragment_mode">
+        <action
+            android:id="@+id/action_modeFragment_to_playFragment"
+            app:destination="@id/playFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.example.timezone.ui.PlayFragment"
+        android:label="fragment_play"
+        tools:layout="@layout/fragment_play" >
+        <action
+            android:id="@+id/action_playFragment_to_answerFragment"
+            app:destination="@id/answerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+
+        </action>
+        <argument
+            android:name="typeOfGame"
+            app:argType="boolean" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.example.timezone.ui.AnswerFragment"
+        android:label="fragment_answer"
+        tools:layout="@layout/fragment_answer" >
+        <action
+            android:id="@+id/action_answerFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+        </action>
+        <argument
+            android:name="time"
+            app:argType="integer" />
+        <argument
+            android:name="city"
+            app:argType="string" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.timezone.ui.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <argument
+            android:name="time"
+            app:argType="integer" />
+        <argument
+            android:name="victory"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_resultsFragment_to_modeFragment"
+            app:destination="@id/modeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+</navigation>

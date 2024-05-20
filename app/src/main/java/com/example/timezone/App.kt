@@ -9,7 +9,7 @@ class App: Application() {
     private val resultDatabase by lazy{ ResultDB.getDatabase(applicationContext)}
     val resultRepository by lazy{
         ResultRepository(resultDatabase.getDao())
-    }.also {  /*Log.d(TAG, " again!")*/ }
+    }
 
 
 }

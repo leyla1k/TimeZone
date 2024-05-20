@@ -57,24 +57,20 @@ class PlayFragment : Fragment() {
     private fun startCountingTimer() {
         val startTime = Date()
         binding.constraintlayout.setOnClickListener {
-           // val f: NumberFormat = DecimalFormat("00")
-             time = Date().time - startTime.time
-            //val min = time / 60000 % 60
-           // val sec = time / 1000 % 60
 
+             time = Date().time - startTime.time
             findNavController().navigate(
                 PlayFragmentDirections.actionPlayFragmentToAnswerFragment(
                     time.toInt(), city
                 )
             )
-            // Toast.makeText(requireActivity(),  f.format(min) + ":" + f.format(sec), Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun startDownCountingTimer() {
         object : CountDownTimer(60000, 1000) {
             override fun onTick(millisUntilFinished: Long) {
-                // Used for formatting digit to be in 2 digits only
+
                 val f: NumberFormat = DecimalFormat("00")
                 val min = millisUntilFinished / 60000 % 60
                 val sec = millisUntilFinished / 1000 % 60

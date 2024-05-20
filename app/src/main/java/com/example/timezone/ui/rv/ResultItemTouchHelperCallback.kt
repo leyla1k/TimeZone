@@ -6,8 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 class ResultItemTouchHelperCallback: ItemTouchHelper.Callback/*, Swipable*/ {
 
-    //override var onProjectSwipeListener: ((Int) -> Unit)?=null
-
     private var mAdapter: ResultItemTouchHelperAdapter? = null
 
     constructor(adapter: ResultItemTouchHelperAdapter?) {
@@ -40,8 +38,6 @@ class ResultItemTouchHelperCallback: ItemTouchHelper.Callback/*, Swipable*/ {
 
     override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
         mAdapter!!.onItemDismiss(viewHolder.adapterPosition)
-        // Log.d("SwipableRight", "onViewCreated: ")
-        // onProjectSwipeListener?.invoke(viewHolder.adapterPosition)
     }
 
 

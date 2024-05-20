@@ -8,13 +8,10 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [ResultDataItem::class], version = 1, exportSchema = false)
 abstract class ResultDB : RoomDatabase(){
-
     abstract fun getDao(): ResultDao
-
     companion object {
         @Volatile
         private var INSTANCE: ResultDB? = null
-
         fun getDatabase(context: Context): ResultDB {
             return INSTANCE ?: synchronized(this)
             {
